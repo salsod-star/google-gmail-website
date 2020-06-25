@@ -758,6 +758,7 @@ header{
 
      .gmail-hero_container {
         height: 50vh !important;
+        width: 100vw !important;
     }
     
     .hero_text-container {
