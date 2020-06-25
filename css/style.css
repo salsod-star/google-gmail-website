@@ -757,7 +757,7 @@ header{
      }
 
      .gmail-hero_container {
-        height: 100vh !important;
+        height: 80vh !important;
     }
     
     .hero_text-container {
@@ -812,6 +812,10 @@ header{
     
     .hidden {
         display: none !important;
+    }
+
+    .anchor-link {
+        display: inline-block !important;
     }
 }
 
