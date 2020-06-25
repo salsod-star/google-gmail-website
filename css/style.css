@@ -166,7 +166,7 @@ header{
 
 .gmail-hero_container {
     background-color: #f8f9fa;
-    padding: 2rem;
+    padding: 2rem 0 1rem;
     margin: auto;
     position: relative;
     height: 80vh;
@@ -191,7 +191,7 @@ header{
 .hero_text-container.current {
     opacity: 1;
     transform: translateX(1000px);
-    transition: all .1s ease-in-out 0.3s;
+    transition: all .5s ease-in-out 0.3s;
 }
 
 
@@ -733,7 +733,7 @@ header{
 
 @media only screen and (max-width: 956px) and (min-width: 900px) {
     .gmail-hero_container {
-        height: 70vh;
+        height: 80vh;
     }
 }
 
