@@ -623,7 +623,7 @@ header{
     /*-----------------------------------------------*/
 
     .gmail-hero_container {
-        height: 50vh !important;
+        height: 70vh !important;
         padding-bottom: 1rem;
     }
 
@@ -757,7 +757,7 @@ header{
      }
 
      .gmail-hero_container {
-        height: 50vh !important;
+        height: 85vh !important;
         width: 100vw !important;
     }
     
