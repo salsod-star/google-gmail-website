@@ -16,10 +16,10 @@ body {
     color: #202124;
 }
 
-header{
+/* header{
     display: block;
     height: 64px;
-}
+} */
 
 .header-container {
     display: block;
@@ -34,11 +34,11 @@ header{
     z-index: 100;
 }
 
-.header-container::after {
+/* .header-container::after {
     content: " ";
     display: table;
     clear: both;
-}
+} */
 
 .header-logo-lockup {
     margin-left: 24px;
@@ -166,41 +166,37 @@ header{
 
 .gmail-hero_container {
     background-color: #f8f9fa;
-    padding: 2rem 0 1rem;
+    padding: 0 1rem;
     margin: auto;
     position: relative;
-    height: 80vh;
+    background-color: #174ea6;
+    display: flex;
 }
 
 .hero_text-container {
     margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    padding: 0 2rem;
-    display: flex;
+    width: 98%;
+    padding-top: 150px;
+    padding-bottom: 60px;
+    display: none;
     justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: -1000px;
-    opacity: 0;
-    transition: all 0.4s ease-in-out;
 }
-
 
 .hero_text-container.current {
-    opacity: 1;
-    transform: translateX(1000px);
-    transition: all .5s ease-in-out 0.3s;
+    display: flex;
 }
-
-
 
 
 .hero-content {
-    flex-basis: 47.92%;
     width: 47.92%;
+    flex: 2 1 47.92%;
     padding: 0 5%;
+    align-self: center;
+}
+
+.hero-image {
+    flex: 1 1.2 47.92%;
+    width: 47.92%;
     align-self: center;
 }
 
@@ -239,29 +235,25 @@ header{
     background-color: #174ea6 !important;
 }
 
-.hero-image {
-    flex-basis: 47.92%;
-    width: 47.92%;
-}
-
 .hero-image img{
     width: 100%;
-    max-width: 100%;
     height: auto;
 }
 
 .buttons button#prev {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 0;
+    transform: translateY(-50%);
     border-radius: 50%;
     background: 0 0;
 }
 
 .buttons button#next {
     position: absolute;
-    top: 45%;
+    top: 50%;
     right: 0;
+    transform: translateY(-50%);
     border-radius: 50%;
     background: 0 0;
 }
@@ -578,6 +570,7 @@ header{
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
+    width: 100%;
 }
 
 .btm-right-nav select:focus{
@@ -611,8 +604,6 @@ header{
 
 
 
-
-
 @media screen and (max-width: 900px) {
     html {
         font-size: 14px;
@@ -623,8 +614,22 @@ header{
     /*-----------------------------------------------*/
 
     .gmail-hero_container {
-        height: 70vh !important;
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
+        display: block;
+    }
+
+    .hero-flex {
+        display: flex;
+    }
+
+    .hero_text-container{
+        padding-top: 70px;
+        padding-bottom: 30px;
+        display: none;
+    }
+
+    .hero_text-container.current {
+        display: flex;
     }
 
     .hero-content {
@@ -724,18 +729,6 @@ header{
     }
 }
 
-@media only screen and (max-width: 1050px) and (min-width: 900px) {
-    .hero-content {
-        padding: 40px 3% 30px;
-        
-    }
-}
-
-@media only screen and (max-width: 956px) and (min-width: 900px) {
-    .gmail-hero_container {
-        height: 80vh;
-    }
-}
 
 @media screen and (max-width: 750px) {
     .hero-image {
@@ -751,20 +744,23 @@ header{
 }
 
 @media screen and (max-width: 700px) {
-     .hero_text-container {
+     /* .hero_text-container {
          flex-direction: column;
          justify-content: center;
-     }
+     } */
 
      .gmail-hero_container {
-        height: 85vh !important;
-        width: 100vw !important;
-    }
-    
+         height: ;
+     }
+
     .hero_text-container {
         padding: 0 2rem;
-        display: block !important;
+        display: none;
         text-align: center;
+    }
+
+    .hero_text-container.current {
+        display: block;
     }
     
     .hero-content {
@@ -829,26 +825,31 @@ header{
 @media screen and (max-width: 800px) {
     .flex-container {
         flex-direction: column !important;
-    }
-
-    .flex-container {
+        margin: 0 auto;
         justify-content: space-around;
         padding: 0 1rem;
-        max-width: 92%;
-        margin: 0 auto;
-        text-align: center;
-    }
-    
-    .flex-item {
         width: 100%;
+        max-width: 95%;
+        text-align: center;
     }
 
     .flex-item .image {
         display: none;
     }
 
+    .flex-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
     .image-hide {
-        display: inline-block !important;
+        display: block !important;
+    }
+
+    .image-hide img{
+        width: 65%;
+        height: auto;
     }
 
     .flex-content {
@@ -862,6 +863,7 @@ header{
     .grid-container {
         grid-gap: 20px;
         padding: 5rem 2rem 0;
+        grid-template-columns: none;
         text-align: center;
     }
 
@@ -887,3 +889,16 @@ header{
     }
 }
 
+@media screen and (max-width: 366px) {
+
+    .flex-content {
+        padding: 4rem 2rem 1rem;
+    }
+}
+
+@media screen and (max-width: 345px) {
+
+    .grid-container {
+        padding: 5rem 1rem 0;
+    }
+}

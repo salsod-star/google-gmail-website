@@ -1,31 +1,3 @@
-// let heroContent = {
-//     headings: ['Get more done with Gmail', 'Write emails faster', 'A faster way to reply'],
-//     paragraph: {
-//         p1: "Join video meetings with live captioning and screen sharing for up to 100 people-now with Google Meets in Gmail.",
-//         p2: "Get suggestions as you type. Simply hit tab to accept and you're done.",
-//         p2: "Respond to emails faster with pre-suggested response that sound just like you."
-//     },
-//     link: "Create an account"
-// };
-
-// let h1 = document.querySelector('.hero-content h1');
-// let para = document.querySelector('.hero-content p');
-// let link = document.querySelector('.hero-content a');
-// let headers = heroContent.headings;
-
-
-// function next() {
-//     for (let i = 0; i < headers.length; i++) {
-//         if (h1.textContent == undefined && para.textContent == undefined && link.textContent == undefined) {
-//             h1.textContent = headers[1];
-//             para.textContent = heroContent.paragraph.p2;
-//             link.textContent = heroContent.link;
-//         }
-//     }
-// }
-
-// next()
-
 let slides = document.querySelectorAll('.hero_text-container');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
@@ -41,7 +13,6 @@ function nextSlide() {
     } else {
         slides[0].classList.add('current');
     }
-    setTimeout(() => current.classList.remove('current'))
 }
 
 function prevSlide() {
@@ -65,3 +36,29 @@ next.addEventListener('click', e => {
 prev.addEventListener('click', e => {
     prevSlide();
 });
+
+
+
+// let heroContent = {
+//     headings: ['Get more done with Gmail', 'Write emails faster', 'A faster way to reply'],
+//     paragraph: {
+//         p1: "Join video meetings with live captioning and screen sharing for up to 100 people-now with Google Meets in Gmail.",
+//         p2: "Get suggestions as you type. Simply hit tab to accept and you're done.",
+//         p2: "Respond to emails faster with pre-suggested response that sound just like you."
+//     }
+// };
+
+// let h1 = document.querySelector('.hero-content h1');
+// let para = document.querySelector('.hero-content p');
+// let link = document.querySelector('.anchor-hero-link');
+// let heroImage = document.querySelector('.hero-image img')
+// let headings = heroContent.headings;
+// let paragraphs = heroContent.paragraph;
+
+
+
+// function next() {
+//     for (let i = 0; i < headings.length; i++) {
+       
+//     }
+// }
