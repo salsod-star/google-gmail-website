@@ -7,5 +7,5 @@ This is just a cloned [google gmail](https://www.google.com/gmail/about) website
 - JavaScript
 
 ## Live Demo
-[Live Demo Link](https://salsodworld.github.io/google-gmail-website/)
+[Live Demo Link](https://salsod-star.github.io/google-gmail-website/)
 
